@@ -1,5 +1,6 @@
 body {
     margin: 0px;
+    background-color: #EDE7F5;
 }
 
 #formTitle {
@@ -13,6 +14,7 @@ body {
 #questionOption {
     font-size: 1.0em;
     text-align: left;
+    
 }
 
 #divHeader {
@@ -23,22 +25,26 @@ body {
         //border-left: 4px solid blue;   
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23), inset 4px 0 0px blue;
     }
+    &:focus-within{
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23), inset 4px 0 0px blue;
+
+    }
+}
+#divQuestion{
+    color: #747474;
+    &:focus-within{
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23), inset 4px 0 0px blue;
+
+    }
+}
+.focus{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23), inset 4px 0 0px blue;
+    
 }
 
-.container {
-    width: 100vw;
-    height: 100vh;
-    background: #6C7A89;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center
-}
 
-.box {
-    width: 60%;
-    background: #fff;
-}
+
+
 
 .item {
     position: relative;
@@ -46,12 +52,14 @@ body {
 }
 
 .grid {
-    display: grid;
+    width: 40%;
     margin: 0 auto;
-    .divQuestion:focus,.divHeader {
+    background: white;
+    display: grid;
+    /*.divQuestion:focus,.divHeader {
         //border-left: 4px solid blue;   
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23), inset 4px 0 0px blue;
-    }
+    }*/
 }
 
 .subgrid {
@@ -64,8 +72,10 @@ body {
     }
     &.formato2 {
         grid-template-columns: 80px auto 100px;
-        &:nth-child(3) {
-            text-align: center
+        //:nth-child(1)
+        & div+div+div{
+            text-align: center;
+            
         }
         .fa-times {
             transition: 0.5s;
@@ -78,7 +88,54 @@ body {
             }
         }
     }
+    &.formato3{
+        grid-template-columns: 50% 50%;
+        
+    }
 }
+
+//header
+
+.top-container {
+    background-color: #6642B0;
+    height: 160px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .header {
+    width: 100%;
+    height: 40px;
+    background: #6642B0;
+
+  }
+  
+  
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  
+
+  .content {
+    width: 100%;
+    height: 2000px;
+
+}
+    .teste{
+        padding: 20px 0px 0px 0px ;    
+        text-align: center;
+        width: 40%;
+        height: 100%;
+        margin: 0 auto;
+        background-color: white;
+    }
+    
+
+
 
 //INPUTS
 /* form starting stylings ------------------------------- */
@@ -213,3 +270,4 @@ select {
     text-align: center;
     border-radius: 50%;
 }
+
