@@ -1,22 +1,22 @@
 body {
     margin: 0px;
     background-color: #EDE7F5;
+    font-family: 'Roboto', sans-serif;
 }
 
-#formTitle {
+.formTitle {
     font-size: 2.5em;
 }
 
-#questionName {
+.questionName {
     font-size: 1.5em;
 }
 
-#questionOption {
+.questionOption {
     font-size: 1.0em;
     text-align: left;
 }
-
-#divHeader {
+.divHeader {
     border-bottom: 1px solid #747474;
     margin-bottom: 25px;
     padding: 1em 2em;
@@ -29,7 +29,7 @@ body {
     }
 }
 
-#divQuestion {
+.divQuestion {
     color: #747474;
     &:focus-within {
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23), inset 4px 0 0px blue;
@@ -84,6 +84,18 @@ body {
     }
 }
 
+#saveButton {
+    color: #7A5BBA;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 10px 30px 10px 30px;
+    margin-right: 15px;
+    float: right;
+    border-radius: 3px;
+    background-color: white;
+    
+}
+
 //header
 .top-container {
     background-color: #6642B0;
@@ -108,8 +120,7 @@ body {
 }
 
 .content {
-    width: 100%;
-    height: 2000px;
+    width: 100%; //height: 2000px;
 }
 
 .teste {
@@ -125,10 +136,10 @@ body {
 //INPUTS
 /* form starting stylings ------------------------------- */
 
-#formTitle,
-#formDescription,
-#questionName,
-#questionOption {
+.formTitle,
+.formDescription,
+.questionName,
+.questionOption {
     padding: 10px 0;
     display: block;
     width: 100%;
@@ -254,4 +265,21 @@ select {
     margin-right: 10px;
     text-align: center;
     border-radius: 50%;
+}
+
+//Menu Float
+#menu {
+    position: fixed;
+    left: 72%;
+    top: 40%;
+    li {
+        padding: 2px 2px 2px 2px;
+        border: white 2px solid;
+        background-color: white;
+        list-style: none;
+        a {
+            color: #747474;
+            text-decoration: none;
+        }
+    }
 }

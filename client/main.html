@@ -6,6 +6,7 @@
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 
 </head>
@@ -13,77 +14,89 @@
 <body>
     {{>main}}
     <script>
-            window.onscroll = function() {myFunction()};
-            
-            var header = document.getElementById("myHeader");
-            var sticky = header.offsetTop;
-            
-            function myFunction() {
-              if (window.pageYOffset > sticky) {
+
+        window.onscroll = function () { myFunction() };
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
                 header.classList.add("sticky");
-              } else {
+            } else {
                 header.classList.remove("sticky");
-              }
             }
-            </script>
+        }
+
+    </script>
 </body>
 
 
 
 <template name="main">
-        <div class="top-container">
-                
-              </div>
-              
-              <div class="header" id="myHeader">
-                  <div class="teste"> <span>QUESTIONS</span> <span>RESPONSES</span> </div>
-              </div>
-              
-              <div class="content">
-                    <section class="grid">
+    <div class="top-container">
+        <a href="" id="saveButton">SAVE</a>
+    </div>
 
-                            <a href="#" id="divHeader">
-                                <div class="item">
-                                    <input type="text" id="formTitle" placeholder="Form Title" required>
-                                    <span class="bar"></span>
-                                </div>
-                                <div class="item ">
-                                    <input type="text" id="formDescription" placeholder="Form Description" required>
-                                    <span class="bar"></span>
-                                </div>
-                            </a>
-                            <a href="#" id="divQuestion">
-                                <div class="item subgrid formato1">
-                                    <div>
-                                        <input type="text" id="questionName" placeholder="Question Name" required>
-                                        <span class="bar"></span></div>
-                                    <div class="select">
-                                        <select name="slct" id="slct">
-                                            <option>Multiple choice</option>
-                                            <option value="1">Yes or Not</option>
-                
-                                        </select>
-                                    </div>
-                
-                                </div>
-                                <div class="item subgrid formato2">
-                                    <div>
-                                        <input type="radio" class="radioCustom" name="" id="" disabled>
-                                        <label for="radio-1" class="radio-custom-label"></label>
-                                    </div>
-                                    <div>
-                                        <input type="text" id="questionOption" placeholder="Option 1" required>
-                                        <span class="bar"></span>
-                                    </div>
-                                    <div>
-                                        <i class="fas fa-times fa-2x"></i>
-                                    </div>
-                                </div>
-                            </a>
-                           
-                        </section>
-            </div>
-              
+    <div class="header" id="myHeader">
+        <div class="teste"> <span>QUESTIONS</span> <span>RESPONSES</span> </div>
+    </div>
+
+    <div class="content">
+        <section class="grid">
+
+            <a href="#" class="divHeader">
+                <div class="item">
+                    <input type="text" class="formTitle" placeholder="Form Title" required>
+                    <span class="bar"></span>
+                </div>
+                <div class="item ">
+                    <input type="text" class="formDescription" placeholder="Form Description" required>
+                    <span class="bar"></span>
+                </div>
+            </a>
+            <a href="#" class="divQuestion">
+                <div class="item subgrid formato1">
+                    <div>
+                        <input type="text" class="questionName" placeholder="Question Name" required>
+                        <span class="bar"></span></div>
+                    <div class="select">
+                        <select name="slct" class="slct">
+                            <option>Multiple choice</option>
+                            <option value="1">Yes or Not</option>
+
+                        </select>
+                    </div>
+
+                </div>
+                <div class="item subgrid formato2">
+                    <div>
+                        <input type="radio" class="radioCustom" name="" id="" disabled>
+                        <label for="radio-1" class="radio-custom-label"></label>
+                    </div>
+                    <div>
+                        <input type="text" class="questionOption" placeholder="Option 1" required>
+                        <span class="bar"></span>
+                    </div>
+                    <div>
+                        <i class="fas fa-times fa-2x"></i>
+                    </div>
+                </div>
+            </a>
+
+        </section>
+        <div id="menu">
+            
+                <li><a href="#"><i class="fas fa-plus-circle fa-2x"></i></a></li>
+                <li><a href="#"><i class="fas fa-plus-circle fa-2x"></i></a></li>
+                <li><a href="#"><i class="fas fa-plus-circle fa-2x"></i></a></li>
+                <li><a href="#"><i class="fas fa-plus-circle fa-2x"></i></a></li>
+                <li><a href="#"><i class="fas fa-plus-circle fa-2x"></i></a></li>
+
+            
+
+        </div>
+    </div>
+
+
+
 </template>
-
-

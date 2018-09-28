@@ -1,30 +1,39 @@
 
 
 Template.main.events({
-    /*'focus #divHeader input'(event, instance) {
-        if(document.querySelector('.focus')){
-            document.querySelector('.focus').classList.remove('focus');
 
+    'scroll #myHeader'(event, instance) {
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
         }
-        document.getElementById('divHeader').classList.add('focus');
-        
-            
-    },
-    'focusout #divHeader input'(event,instance){
-        
-    },'focus #divQuestion'(event, instance) {
-        if(document.querySelector('.focus')){
-            document.querySelector('.focus').classList.remove('focus');
 
-        }
-        document.getElementById('divQuestion').classList.add('focus');
-        
     },
-    'focusout #divQuestion'(event,instance){
-        
-    }*/
+    'focusin #divHeader '(event, instance) {
+        const menu = document.getElementById('menu');
+        // console.log(menu.style.top +'px');
+        menu.style.top = document.getElementById('divHeader').getBoundingClientRect().top + 'px';
+        //console.log(event.target.getBoundingClientRect().top);   
+        //console.log(menu.style.top);    
+    },
+    'focusout #divHeader input'(event, instance) {
 
-    
-  
-  });
-  
+    }, 'focusin #divQuestion'(event, instance) {
+        const menu = document.getElementById('menu');
+        menu.style.top = document.getElementById('divQuestion').getBoundingClientRect().top + 'px';
+
+
+
+    },
+    'focusout #divQuestion'(event, instance) {
+
+    }
+
+
+
+});
